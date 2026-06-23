@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز المصطفى لتحفيظ القرآن الكريم</title>
+    <meta name="description"
+        content="مركز المصطفى لتحفيظ وتجويد القرآن الكريم - أونلاين وأوفلاين تحت إشراف الشيخ مصطفى الألفي">
+
+    <!-- Google Fonts for premium Islamic aesthetic and modern English/Turkish text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for high-quality icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Splash Welcome Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <img src="./اللوجو.png" alt="لوجو مركز المصطفى" class="splash-logo">
+            <h1 class="splash-title" data-i18n="splash_title">مركز المصطفى</h1>
+            <p class="splash-subtitle" data-i18n="splash_subtitle">لتحفيظ القرآن الكريم وتدريس علومه</p>
+            <div class="arabic-ornament">﷽</div>
+            <div class="splash-loader"></div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="./اللوجو.png" alt="مركز المصطفى" class="nav-logo">
+                <span class="logo-text" data-i18n="nav_brand">مركز المصطفى</span>
+            </div>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active" data-i18n="nav_home">الرئيسية</a></li>
+                    <li><a href="#about" class="nav-link" data-i18n="nav_about">عن المركز</a></li>
+                    <li><a href="#ceremony" class="nav-link" data-i18n="nav_video">الحفل السنوي</a></li>
+                    <li><a href="#pricing" class="nav-link" data-i18n="nav_pricing">الاشتراكات</a></li>
+                    <li><a href="#certificates" class="nav-link" data-i18n="nav_certificates">الإجازات والشهادات</a>
+                    </li>
+                    <li><a href="#virtual-room" class="nav-link" data-i18n="nav_virtual_room">غرفة المقابلة</a></li>
+                    <li><a href="#register" class="btn btn-primary nav-register-btn" data-i18n="nav_register">سجل
+                            الآن</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="nav-controls">
+                <!-- Language Selector -->
+                <div class="lang-selector">
+                    <button class="lang-btn" id="lang-btn">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="current-lang">العربية</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button class="lang-opt" data-lang="ar">العربية</button>
+                        <button class="lang-opt" data-lang="en">English</button>
+                        <button class="lang-opt" data-lang="tr">Türkçe</button>
+                    </div>
+                </div>
+
+                <!-- Admin Action -->
+                <button class="btn-admin-trigger" id="admin-trigger-btn" title="لوحة التحكم">
+                    <i class="fa-solid fa-user-shield"></i>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-toggle" id="mobile-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Welcome Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-ornaments"></div>
+        <div class="section-container hero-grid">
+            <div class="hero-content">
+                <span class="badge" data-i18n="hero_badge">أونلاين وأوفلاين</span>
+                <h1 class="hero-title" data-i18n="hero_title">رحلتك المباركة لحفظ القرآن الكريم تبدأ هنا</h1>
+                <p class="hero-desc" data-i18n="hero_desc">
+                    تعلم التلاوة والتجويد والحفظ المتقن بأحدث الطرق العلمية والتربوية مع إمكانية الحصول على الإجازات
+                    المتصلة بالسند.
+                </p>
+                <div class="hero-cta">
+                    <a href="#register" class="btn btn-primary btn-lg" data-i18n="hero_cta_register">ابدأ رحلتك الآن</a>
+                    <a href="#about" class="btn btn-secondary btn-lg" data-i18n="hero_cta_about">اكتشف المزيد</a>
+                </div>
+            </div>
+
+            <div class="hero-media">
+                <div class="cinematic-photo-container" id="cinematic-photo">
+                    <div class="photo-glow"></div>
+                    <img src="./الصورة.png" alt="الشيخ مصطفى الألفي" class="personal-photo">
+                    <div class="photo-caption">
+                        <h3 data-i18n="owner_name">الشيخ مصطفى الألفي</h3>
+                        <p data-i18n="owner_title">مؤسس ومدير مركز المصطفى</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Details Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="about_title">عن مركز المصطفى</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-i18n="about_subtitle">نهج أصيل، وتأصيل علمي لتحفيظ كتاب الله</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <i class="fa-solid fa-mosque"></i>
+                    </div>
+                    <h3 data-i18n="about_card1_title">منهج متكامل</h3>
+                    <p data-i18n="about_card1_desc">نتبع منهجاً متدرجاً يناسب جميع الأعمار والمستويات، من التلقين البسيط
+                        للأطفال إلى دراسة المتون الكبرى للطلاب المتقدمين.</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 data-i18n="about_card2_title">مرونة التعليم</h3>
+                    <p data-i18n="about_card2_desc">ندمج بين الدراسة الحلقية المباشرة في مقر المركز (أوفلاين) وبين
+                        الدراسة التفاعلية عن بُعد (أونلاين) بجودة عالية.</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 data-i18n="about_card3_title">سند متصل</h3>
+                    <p data-i18n="about_card3_desc">نؤهل الطلاب المتميزين للحصول على الإجازات والشهادات المعتمدة في
+                        القراءات والروايات المختلفة بسند متصل للنبي ﷺ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ceremony Video Section -->
+    <section id="ceremony" class="ceremony-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="video_title">حفل مسابقة أنوار القرآن</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-i18n="video_subtitle">مقتطفات من حفل التكريم في مسابقة المركز الكبرى
+                </p>
+            </div>
+
+            <div class="video-wrapper">
+                <div class="video-container" id="ceremony-video-container">
+                    <!-- Clickable Thumbnail Overlay -->
+                    <div class="video-thumbnail-overlay" id="video-thumbnail-overlay" onclick="playYouTubeVideo()">
+                        <img src="./الصورة المصغرة.png" alt="حفل مسابقة أنوار القرآن - الصورة المصغرة" class="video-thumbnail-img">
+                        <div class="play-btn-overlay">
+                            <div class="play-circle">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <span class="play-label" data-i18n="play_video_label">انقر لمشاهدة الحفل</span>
+                        </div>
+                    </div>
+                    <!-- YouTube iframe loads only after click -->
+                    <iframe id="ceremony-video" class="hidden" src=""
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="pricing_title">تفاصيل الاشتراكات</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-i18n="pricing_subtitle">باقات موحدة للمحافظة على جودة والتزام التعليم
+                    للجميع</p>
+            </div>
+
+            <div class="pricing-card-wrapper">
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <span class="pricing-tag" data-i18n="pricing_tag">الخطة الشهرية الموحدة</span>
+                        <div class="price">
+                            <span class="currency" data-i18n="pricing_currency">ج.م</span>
+                            <span class="amount">4000</span>
+                            <span class="period" data-i18n="pricing_period">/ شهرياً</span>
+                        </div>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span data-i18n="pricing_feat_sessions">12 حصة تفاعلية متكاملة شهرياً</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span data-i18n="pricing_feat_flexibility">متاح أونلاين (عن بعد) أو أوفلاين (في
+                                المقر)</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span data-i18n="pricing_feat_duration">حصة فردية مخصصة لضمان الفهم والحفظ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span data-i18n="pricing_feat_prepaid">نظام الدفع مقدم في بداية كل شهر</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span data-i18n="pricing_feat_followup">متابعة أسبوعية وتقارير أداء دورية لأولياء
+                                الأمور</span>
+                        </li>
+                    </ul>
+
+                    <div class="pricing-footer">
+                        <a href="#register" class="btn btn-primary btn-block" data-i18n="pricing_btn">سجل في البرنامج
+                            الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section (3D Tilt Cards) -->
+    <section id="certificates" class="certificates-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="cert_title">قسم الإجازات والشهادات</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-i18n="cert_subtitle">إجازات الشيخ مصطفى الألفي المعتمدة وشهادات التقدير
+                </p>
+            </div>
+
+            <!-- Tabs Controls -->
+            <div class="tabs-container">
+                <button class="tab-btn active" data-tab="quran" data-i18n="tab_quran">إجازات القرآن الكريم</button>
+                <button class="tab-btn" data-tab="others" data-i18n="tab_others">إجازات وشهادات أخرى</button>
+            </div>
+
+            <!-- Tab Content: Quran Certificates -->
+            <div class="tab-content active" id="tab-quran">
+                <div class="certificates-grid">
+                    <!-- Certificate 1 -->
+                    <div class="cert-card-3d" data-tilt>
+                        <div class="cert-card-inner">
+                            <img src="./الشهادات/إجازات القرآن الكريم/1.jpeg" alt="إجازة قرآن 1" class="cert-img">
+                            <div class="cert-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            </div>
+                        </div>
+                        <h4 class="cert-label" data-i18n="quran_cert_1">إجازة القرآن الكريم - الجزء الأول</h4>
+                    </div>
+                    <!-- Certificate 2 -->
+                    <div class="cert-card-3d" data-tilt>
+                        <div class="cert-card-inner">
+                            <img src="./الشهادات/إجازات القرآن الكريم/2.jpeg" alt="إجازة قرآن 2" class="cert-img">
+                            <div class="cert-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            </div>
+                        </div>
+                        <h4 class="cert-label" data-i18n="quran_cert_2">إجازة القرآن الكريم - الجزء الثاني</h4>
+                    </div>
+                    <!-- Certificate 3 -->
+                    <div class="cert-card-3d" data-tilt>
+                        <div class="cert-card-inner">
+                            <img src="./الشهادات/إجازات القرآن الكريم/3.jpeg" alt="إجازة قرآن 3" class="cert-img">
+                            <div class="cert-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            </div>
+                        </div>
+                        <h4 class="cert-label" data-i18n="quran_cert_3">إجازة القرآن الكريم - الجزء الثالث</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Other Certificates -->
+            <div class="tab-content" id="tab-others">
+                <div class="certificates-grid">
+                    <!-- Certificate 1 -->
+                    <div class="cert-card-3d" data-tilt>
+                        <div class="cert-card-inner">
+                            <img src="./الشهادات/إجازات أخري/1.jpeg" alt="شهادة أخرى 1" class="cert-img">
+                            <div class="cert-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            </div>
+                        </div>
+                        <h4 class="cert-label" data-i18n="other_cert_1">شهادة تقدير وإنجاز علمي</h4>
+                    </div>
+                    <!-- Certificate 2 -->
+                    <div class="cert-card-3d" data-tilt>
+                        <div class="cert-card-inner">
+                            <img src="./الشهادات/إجازات أخري/2.jpeg" alt="شهادة أخرى 2" class="cert-img">
+                            <div class="cert-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            </div>
+                        </div>
+                        <h4 class="cert-label" data-i18n="other_cert_2">إجازة في العلوم الشرعية</h4>
+                    </div>
+                    <!-- Certificate 3 -->
+                    <div class="cert-card-3d" data-tilt>
+                        <div class="cert-card-inner">
+                            <img src="./الشهادات/إجازات أخري/3.jpeg" alt="شهادة أخرى 3" class="cert-img">
+                            <div class="cert-overlay">
+                                <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            </div>
+                        </div>
+                        <h4 class="cert-label" data-i18n="other_cert_3">شهادة حضور الدورات المتخصصة</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Interview Room Section -->
+    <section id="virtual-room" class="virtual-room-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="virtual_title">غرفة المقابلة والحصص المرئية</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-i18n="virtual_subtitle">تواصل مرئي مباشر مع الشيخ مصطفى الألفي مع شات
+                    مدمج وتغيير المظهر والوضعيات</p>
+            </div>
+
+            <!-- Virtual Room Interactive Box -->
+            <div class="virtual-room-box">
+                <!-- Controls and Toolbar -->
+                <div class="room-toolbar">
+                    <div class="toolbar-group">
+                        <button class="btn btn-outline btn-sm" id="btn-theme-toggle">
+                            <i class="fa-solid fa-moon"></i> <span data-i18n="btn_mode_theme">تغيير المظهر
+                                (داكن/فاتح)</span>
+                        </button>
+                        <button class="btn btn-outline btn-sm" id="btn-layout-toggle">
+                            <i class="fa-solid fa-table-cells-large"></i> <span data-i18n="btn_mode_layout">تغيير تخطيط
+                                الفيديو</span>
+                        </button>
+                    </div>
+                    <div class="toolbar-group">
+                        <button class="btn btn-primary btn-sm" id="btn-jitsi-connect">
+                            <i class="fa-solid fa-video"></i> <span data-i18n="btn_jitsi_connect">تشغيل مكالمة حقيقية
+                                (Jitsi)</span>
+                        </button>
+                        <button class="btn btn-danger btn-sm hidden" id="btn-jitsi-disconnect">
+                            <i class="fa-solid fa-phone-slash"></i> <span data-i18n="btn_jitsi_disconnect">إنهاء
+                                المكالمة</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Video Display Area -->
+                <div class="video-screens-area grid-layout" id="video-screens-area">
+                    <!-- Local Camera Feed (Teacher / Sheikh) -->
+                    <div class="video-screen-card" id="screen-teacher">
+                        <div class="video-placeholder" id="teacher-placeholder">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p data-i18n="teacher_cam_off">كاميرا الشيخ مغلقة</p>
+                        </div>
+                        <video id="teacher-webcam" autoplay playsinline muted class="webcam-feed hidden"></video>
+                        <div class="screen-label">
+                            <span class="pulse-indicator"></span>
+                            <span data-i18n="label_sheikh">الشيخ مصطفى الألفي (المعلم)</span>
+                        </div>
+                        <div class="screen-controls">
+                            <button class="screen-ctrl-btn active" id="btn-toggle-mic-teacher" title="كتم الصوت"><i
+                                    class="fa-solid fa-microphone"></i></button>
+                            <button class="screen-ctrl-btn active" id="btn-toggle-cam-teacher" title="إيقاف الكاميرا"><i
+                                    class="fa-solid fa-video"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Remote Camera Feed (Student) -->
+                    <div class="video-screen-card" id="screen-student">
+                        <div class="video-placeholder" id="student-placeholder">
+                            <i class="fa-solid fa-user-graduate"></i>
+                            <p data-i18n="student_cam_off">كاميرا الطالب مغلقة</p>
+                        </div>
+                        <video id="student-webcam" autoplay playsinline class="webcam-feed hidden"></video>
+                        <div class="screen-label">
+                            <span class="pulse-indicator student"></span>
+                            <span id="label-student-name" data-i18n="label_student">الطالب (أنت)</span>
+                        </div>
+                        <div class="screen-controls">
+                            <button class="screen-ctrl-btn active" id="btn-toggle-mic-student" title="كتم الصوت"><i
+                                    class="fa-solid fa-microphone"></i></button>
+                            <button class="screen-ctrl-btn active" id="btn-toggle-cam-student" title="إيقاف الكاميرا"><i
+                                    class="fa-solid fa-video"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Jitsi Real Connection container -->
+                    <div class="jitsi-iframe-container hidden" id="jitsi-iframe-container">
+                        <!-- Jitsi iframe will be dynamically generated here -->
+                    </div>
+                </div>
+
+                <!-- Chat Room Area -->
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h4><i class="fa-solid fa-comments"></i> <span data-i18n="chat_header">صندوق المحادثة الفورية
+                                وتدوين الملاحظات</span></h4>
+                        <span class="chat-badge" data-i18n="chat_online">نشط الآن</span>
+                    </div>
+
+                    <div class="chat-messages-area" id="chat-messages-area">
+                        <!-- Welcome message -->
+                        <div class="chat-msg system">
+                            <span class="msg-time" id="chat-start-time">12:00</span>
+                            <p data-i18n="chat_system_welcome">مرحباً بك في شات الغرفة التفاعلية لمركز المصطفى. يمكنك
+                                كتابة الرسائل أو الآيات القرآنية والتصحيحات هنا.</p>
+                        </div>
+                    </div>
+
+                    <form id="chat-input-form" class="chat-input-form">
+                        <input type="text" id="chat-input-message" placeholder="اكتب رسالتك أو ملاحظاتك هنا..." required
+                            autocomplete="off" data-i18n="chat_input_placeholder">
+                        <button type="submit" class="btn btn-primary" id="btn-send-message">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="register-section">
+        <div class="section-container">
+            <div class="register-card">
+                <div class="register-header">
+                    <h2 data-i18n="reg_title">تقديم طلب الالتحاق بالمركز</h2>
+                    <p data-i18n="reg_subtitle">املأ الاستمارة بدقة وسنتواصل معك لتحديد موعد الاختبار وتأكيد الاشتراك
+                    </p>
+                </div>
+
+                <form id="student-form" class="student-form">
+                    <!-- Hidden elements for Web3Forms email configuration -->
+                    <input type="hidden" name="access_key" value="70e637bd-d961-460f-90bf-12e022dfa640">
+                    <!-- Default key, will also handle in JS -->
+                    <input type="hidden" name="subject" value="طالب جديد مسجل في مركز المصطفى">
+                    <input type="hidden" name="from_name" value="مركز المصطفى">
+                    <input type="hidden" name="to_email" value="yousefadel111333@gmail.com">
+
+                    <div class="form-grid">
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="name" data-i18n="form_name">الاسم بالكامل *</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="name" name="name" required placeholder="مثال: أحمد محمد علي">
+                            </div>
+                        </div>
+
+                        <!-- Age -->
+                        <div class="form-group">
+                            <label for="age" data-i18n="form_age">العمر *</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <input type="number" id="age" name="age" required min="4" max="90"
+                                    placeholder="مثال: 15">
+                            </div>
+                        </div>
+
+                        <!-- Country/Address -->
+                        <div class="form-group">
+                            <label for="address" data-i18n="form_address">البلد / العنوان بالتفصيل *</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <input type="text" id="address" name="address" required
+                                    placeholder="مثال: مصر - كفر الثعبانية">
+                            </div>
+                        </div>
+
+                        <!-- Phone / WhatsApp -->
+                        <div class="form-group">
+                            <label for="phone" data-i18n="form_phone">رقم الهاتف (الواتساب) *</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="tel" id="phone" name="phone" required placeholder="مثال: +2011XXXXXXXX">
+                            </div>
+                        </div>
+
+                        <!-- Learning Mode -->
+                        <div class="form-group">
+                            <label for="mode" data-i18n="form_mode">نظام الدراسة المفضل *</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <select id="mode" name="mode" required>
+                                    <option value="" disabled selected data-i18n="form_select_mode">اختر نظام الدراسة...
+                                    </option>
+                                    <option value="online" data-i18n="form_mode_online">أونلاين (عن بُعد عبر زووم /
+                                        تليجرام)</option>
+                                    <option value="offline" data-i18n="form_mode_offline">أوفلاين (حضورياً بمقر المركز)
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Stop Period -->
+                        <div class="form-group">
+                            <label for="stop_duration" data-i18n="form_stop">منذ متى وأنت متوقف عن الحفظ؟ *</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-hourglass-half"></i>
+                                <input type="text" id="stop_duration" name="stop_duration" required
+                                    placeholder="مثال: شهرين، أو مستمر بالحفظ حالياً">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="form-group full-width">
+                        <label for="experience" data-i18n="form_experience">تجربتك السابقة في حفظ القرآن الكريم بالتفصيل
+                            *</label>
+                        <div class="input-wrapper text-area-wrapper">
+                            <i class="fa-solid fa-book-open"></i>
+                            <textarea id="experience" name="experience" rows="4" required
+                                placeholder="مثال: حفظت 5 أجزاء وأعرف أحكام التجويد الأساسية برواية حفص عن عاصم..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="form-group full-width">
+                        <label for="notes" data-i18n="form_notes">أي ملاحظات إضافية أو رغبات خاصة؟</label>
+                        <div class="input-wrapper text-area-wrapper">
+                            <i class="fa-solid fa-comment-dots"></i>
+                            <textarea id="notes" name="notes" rows="3"
+                                placeholder="اكتب هنا أي تفاصيل تود إعلامنا بها..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">
+                            <span id="btn-text" data-i18n="form_submit">إرسال طلب الانضمام</span>
+                            <span id="btn-spinner" class="spinner hidden"></span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div id="form-success" class="form-alert success hidden">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div>
+                        <h4 data-i18n="success_title">تم إرسال طلبك بنجاح!</h4>
+                        <p data-i18n="success_desc">شكرًا لك على ثقتك بمركز المصطفى. سنقوم بالتواصل معك عبر رقم الواتساب
+                            الذي سجلته خلال 24 ساعة.</p>
+                    </div>
+                </div>
+
+                <!-- Error Message -->
+                <div id="form-error" class="form-alert error hidden">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <div>
+                        <h4 data-i18n="error_title">حدث خطأ أثناء الإرسال!</h4>
+                        <p data-i18n="error_desc">يرجى التحقق من اتصالك بالإنترنت والمحاولة مجدداً.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="section-container footer-grid">
+            <div class="footer-brand">
+                <div class="logo-area">
+                    <img src="./اللوجو.png" alt="شعار مركز المصطفى" class="footer-logo">
+                    <span class="logo-text" data-i18n="nav_brand">مركز المصطفى</span>
+                </div>
+                <p class="footer-about-desc" data-i18n="footer_desc">
+                    مؤسسة تعليمية قرآنية متميزة تسعى لنشر كتاب الله وتدريس علوم التجويد والقراءات بأعلى معايير الإتقان
+                    والجودة.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3 data-i18n="footer_quick_links">روابط سريعة</h3>
+                <ul>
+                    <li><a href="#hero" data-i18n="nav_home">الرئيسية</a></li>
+                    <li><a href="#about" data-i18n="nav_about">عن المركز</a></li>
+                    <li><a href="#ceremony" data-i18n="nav_video">الحفل السنوي</a></li>
+                    <li><a href="#pricing" data-i18n="nav_pricing">الاشتراكات</a></li>
+                    <li><a href="#certificates" data-i18n="nav_certificates">الإجازات والشهادات</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3 data-i18n="footer_contact_info">معلومات التواصل والمقر</h3>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span><a href="https://www.google.com/maps/@30.9820876,31.2789613,3601m/data=!3m1!1e3!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDYyMS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank" data-i18n="contact_address">مصر، كفر الثعبانية</a></span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+20 11 03789983</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span><a href="https://wa.me/201103789983" target="_blank">+20 11 03789983</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social-bar">
+            <div class="social-links-wrapper">
+                <a href="https://wa.me/201103789983" target="_blank" class="social-icon whatsapp" title="WhatsApp"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://t.me/+201103789983" target="_blank" class="social-icon telegram" title="Telegram"><i
+                        class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.facebook.com/mstfy.alalfy.609180" target="_blank" class="social-icon facebook"
+                    title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@Dar_AlMustafa_Official" target="_blank" class="social-icon youtube"
+                    title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 <span data-i18n="copyright_text">مركز المصطفى. جميع الحقوق محفوظة.</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox Modal for Certificates -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content-wrapper">
+            <img class="lightbox-img" id="lightbox-img">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Admin Panel Password Modal -->
+    <div id="admin-pass-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <div class="admin-modal-header">
+                <h3 data-i18n="admin_pass_title">الدخول للوحة الإدارة</h3>
+                <span class="modal-close" id="admin-pass-close">&times;</span>
+            </div>
+            <form id="admin-auth-form">
+                <p data-i18n="admin_pass_desc">يرجى إدخال كلمة المرور المخصصة للوحة التحكم:</p>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="admin-password" placeholder="أدخل كلمة المرور..." required>
+                </div>
+                <div class="error-msg hidden" id="auth-error-msg" data-i18n="admin_auth_err">كلمة المرور غير صحيحة!
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" data-i18n="admin_btn_login">دخول</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard Modal (Main view once authenticated) -->
+    <div id="admin-dashboard-modal" class="admin-modal dashboard">
+        <div class="admin-modal-content large">
+            <div class="admin-modal-header">
+                <h3><i class="fa-solid fa-toolbox"></i> <span data-i18n="dashboard_title">لوحة تحكم إدارة مركز
+                        المصطفى</span></h3>
+                <span class="modal-close" id="admin-db-close">&times;</span>
+            </div>
+
+            <div class="dashboard-stats-grid">
+                <!-- Stat 1: Total Visits -->
+                <div class="stat-card">
+                    <div class="stat-icon visits">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4 data-i18n="stat_visits">إجمالي زيارات الموقع</h4>
+                        <span class="stat-val" id="stat-total-visits">0</span>
+                    </div>
+                </div>
+
+                <!-- Stat 2: Total Registrations -->
+                <div class="stat-card">
+                    <div class="stat-icon submissions">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4 data-i18n="stat_submissions">إجمالي طلبات التسجيل</h4>
+                        <span class="stat-val" id="stat-total-registrations">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Applicants Table/List -->
+            <div class="applicants-list-wrapper">
+                <div class="list-header-actions">
+                    <h4 data-i18n="applicants_list">قائمة المتقدمين الجدد</h4>
+                    <div class="actions-group">
+                        <button class="btn btn-outline btn-sm" id="export-csv-btn">
+                            <i class="fa-solid fa-file-csv"></i> <span data-i18n="btn_export">تصدير CSV</span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="clear-all-btn">
+                            <i class="fa-solid fa-trash-can"></i> <span data-i18n="btn_clear_all">حذف كل
+                                المتقدمين</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="applicants-table" id="applicants-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="th_date">التاريخ</th>
+                                <th data-i18n="th_name">الاسم</th>
+                                <th data-i18n="th_age">العمر</th>
+                                <th data-i18n="th_address">العنوان/البلد</th>
+                                <th data-i18n="th_phone">رقم الواتساب</th>
+                                <th data-i18n="th_mode">نظام الدراسة</th>
+                                <th data-i18n="th_stop">التوقف</th>
+                                <th data-i18n="th_experience">التجربة السابقة</th>
+                                <th data-i18n="th_notes">ملاحظات</th>
+                                <th data-i18n="th_actions">إجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="applicants-tbody">
+                            <!-- Injected dynamically via JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="empty-state hidden" id="table-empty-state">
+                    <i class="fa-solid fa-user-slash"></i>
+                    <p data-i18n="empty_applicants">لا يوجد طلبات تقديم حتى الآن.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="app.js"></script>
+</body>
+
+</html>
